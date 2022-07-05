@@ -15,13 +15,14 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
 <!DOCTYPE HTML>
 <html data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page" lang="${page.language}"
+      data-sly-use.pageModel="com.adobe.cq.email.core.components.models.PageModel"
       data-sly-use.pwa="com.adobe.cq.wcm.core.components.models.PWA"
       data-sly-use.emailPage="com.adobe.cq.email.core.components.models.EmailPage"
       data-sly-use.head="head.html"
       data-sly-use.footer="footer.html"
       data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html"
       data-sly-use.clientLibs="/libs/granite/sightly/templates/clientlib.html">
-<head data-sly-call="${head.head @ page = page, pwa = pwa}"></head>
+<head data-sly-call="${head.head @ page = page, pwa = pwa, pageModel = pageModel}"></head>
 <body class="${page.cssClassNames}"
       id="${page.id}"
       data-cmp-data-layer-enabled="${page.data ? true : false}">

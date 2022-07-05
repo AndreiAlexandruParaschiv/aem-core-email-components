@@ -46,6 +46,15 @@ Core Components | AEM as a Cloud Service | AEM 6.5 SP13 | Java SE | Maven
 
 The Email Core Components require the use of [editable templates](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html) and do not support Classic UI nor static templates. If needed, check out the [AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html).
 
+### ClientLibs
+
+Depending on the component used, a relevant client library category needs to be added to a relevant site client library using the embed
+property, this client library category contains the recommended base CSS styling and JavaScript.
+
+> embed="[core.email.components.test,core.email.components.container,core.wcm.components.tabs.v1,core.email.components.experiencefragment,core.email.components.teaser,core.email.components.image.v1.image,core.email.components.text.v1.text,core.email.components.segmentation.v1.segmentation,cmp-email-examples.site]"
+
+ 
+
 ### Known Issues
 
 ## Release Notes
