@@ -16,6 +16,7 @@
 package com.adobe.cq.email.core.components.models;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
@@ -29,10 +30,13 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 public class PageModel {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String [] allowedClientLib;
+    String[] allowedClientLib;
 
     public String[] getAllowedClientLib() {
-        return Arrays.copyOf(allowedClientLib,allowedClientLib.length);
+        if (Objects.isNull(allowedClientLib)) {
+            return new String[0];
+        }
+        return Arrays.copyOf(allowedClientLib, allowedClientLib.length);
 
 
     }
